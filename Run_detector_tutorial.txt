@@ -1,0 +1,60 @@
+
+** First time setting up **
+screen
+python3 -m venv kurtosis-env
+source kurtosis-env/bin/activate
+pip install fastdtw
+pip install soundfile
+pip install matplotlib
+pip install scipy
+pip install pandas
+pip install numba
+
+** Start run **
+screen -S kurtosis-run
+cd /net/home6/xmouy/
+source kurtosis-env/bin/activate
+cd //net/stellwagen/STAFF/Xavier/kurtosis_detector/
+
+python3 main.py //net/stellwagen/ACOUSTIC_DATA/BOTTOM_MOUNTED/NEFSC_GOM/NEFSC_GOM_202101_PORTLAND/5428_48kHz_UTC-5_UTC-4 ./results/NEFSC_GOM_202101_PORTLAND ./config/config.ini ./config/template_2006.csv -or
+python3 main.py //net/stellwagen/ACOUSTIC_DATA/BOTTOM_MOUNTED/NEFSC_SBNMS/NEFSC_SBNMS_201901_SB02/805867544_48kHz ./results/NEFSC_SBNMS_201901_SB02 ./config/config.ini ./config/template_2006.csv -or
+python3 main.py //net/stellwagen/ACOUSTIC_DATA/BOTTOM_MOUNTED/NEFSC_SBNMS/NEFSC_SBNMS_200601/NEFSC_SBNMS_200601_EST ./results/NEFSC_SBNMS_200601_CH3 ./config/config_ch3.ini ./config/template_2006.csv -or -r
+python3 main.py //net/stellwagen/ACOUSTIC_DATA/BOTTOM_MOUNTED/NEFSC_SBNMS/NEFSC_SBNMS_200601/NEFSC_SBNMS_200601_EST ./results/NEFSC_SBNMS_200601_CH7 ./config/config_ch7.ini ./config/template_2006.csv -or -r
+
+python3 main.py //net/stellwagen/ACOUSTIC_DATA/BOTTOM_MOUNTED/NEFSC_SBNMS/NEFSC_SBNMS_201811_SB02/1677778970_48kHz ./results/NEFSC_SBNMS_201811_SB02 ./config/config.ini ./config/template_2006.csv -or -r
+python3 main.py //net/stellwagen/ACOUSTIC_DATA/BOTTOM_MOUNTED/NEFSC_MA-RI/NEFSC_MA-RI_201512/AIFFS_EST ./results/NEFSC_MA-RI_201512_CH3 ./config/config_ch3.ini ./config/template_2006.csv -or -r
+
+python3 main.py //net/stellwagen/ACOUSTIC_DATA/BOTTOM_MOUNTED/NEFSC_GEORGES-BANK/NEFSC_GEORGES-BANK_201203 ./results/NEFSC_GEORGES-BANK_201203_CH5 ./config/config_ch5.ini ./config/template_2006.csv -or -r
+
+
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_MA-RI\NEFSC_MA-RI_202102_COX01\NEFSC_MA-RI_202102_COX01_ST\671399976_2kHz" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_MA-RI_202102_COX01_ST" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_MA-RI\NEFSC_MA-RI_202107_COX01\NEFSC_MA-RI_202107_COX01_ST\6075_64kHz_UTC" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_MA-RI_202107_COX01_ST" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_MA-RI\NEFSC_MA-RI_202111_COX01\NEFSC_MA-RI_202111_COX01_ST\6077_64kHz_UTC" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_MA-RI_202111_COX01_ST" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_MA-RI\NEFSC_MA-RI_202202_COX01\NEFSC_MA-RI_202202_COX01_ST\6124_64kHz_UTC" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_MA-RI_202202_COX01_ST" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+
+
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_MA-RI\NEFSC_MA-RI_202102_COX02\NEFSC_MA-RI_202102_COX02_ST\5444_2kHz" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_MA-RI_202102_COX02_ST" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_MA-RI\NEFSC_MA-RI_202107_COX02\NEFSC_MA-RI_202107_COX02_ST\6076_64kHz_UTC" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_MA-RI_202107_COX02_ST" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_MA-RI\NEFSC_MA-RI_202111_COX02\NEFSC_MA-RI_202111_COX02_ST\6078_64kHz_UTC" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_MA-RI_202111_COX02_ST" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_MA-RI\NEFSC_MA-RI_202202_COX02\NEFSC_MA-RI_202202_COX02_ST\6125_64kHz_UTC" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_MA-RI_202202_COX02_ST" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+
+python main.py "Z:\ACOUSTIC_DATA\GLIDERS\WHOI_GEORGES-BANK\WHOI_GEORGES-BANK_201504_gsc0415_we03\dmon" "Z:\STAFF\Xavier\kurtosis_detector\results\WHOI_GEORGES-BANK_201504_gsc0415_we03" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_SBNMS\NEFSC_SBNMS_201901_SB03\1678278694_48kHz" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_SBNMS_201901_SB03" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_GOM\NEFSC_GOM_202205_USTR07\6567_48kHz_UTC" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_GOM_202205_USTR07" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_SBNMS\NEFSC_SBNMS_201811_SB03\671879182_48kHz" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_SBNMS_201811_SB03" "Z:\STAFF\Xavier\kurtosis_detector\config\config.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven
+
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_SBNMS\NEFSC_SBNMS_200603\NEFSC_SBNMS_200603_EST" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_SBNMS_200603_CH9" "Z:\STAFF\Xavier\kurtosis_detector\config\config_ch9.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven -r
+
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_SBNMS\NEFSC_SBNMS_200606\NEFSC_SBNMS_200606_EST" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_SBNMS_200606_CH5" "Z:\STAFF\Xavier\kurtosis_detector\config\config_ch5.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven -r
+
+python main.py "Z:\ACOUSTIC_DATA\BOTTOM_MOUNTED\NEFSC_SBNMS\NEFSC_SBNMS_200609\NEFSC_SBNMS_200609_EST" "Z:\STAFF\Xavier\kurtosis_detector\results\NEFSC_SBNMS_200609_CH5" "Z:\STAFF\Xavier\kurtosis_detector\config\config_ch5.ini" "Z:\STAFF\Xavier\kurtosis_detector\config\template_2006.csv" --raven -r
+
+**
+screen -ls       : list screen sessions
+screen -r        : reattach session
+screen -D <name> : Detach session with ID <name>
+Ctrl-a Ctrl-d    : detach session
+Ctrl-a k         : kill current session
+pkill screen     : kill all screen sessions
+
+
